@@ -20,5 +20,6 @@ venv/
 # Local runtime data
 *.sqlite
 *.sqlite3
-memory/
+memory/*.sqlite*
+memory/data/
 uploads/
