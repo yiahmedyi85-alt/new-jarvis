@@ -109,6 +109,22 @@ The browser must never receive the permanent Gemini API key. The cloud service w
 
 Cloud conversations can continue while the laptop is off because the cloud service owns the AI session. Actions that require the laptop, its applications, or its local files cannot run while the laptop is off. The phone interface is a web app, not a telephone-number or PSTN calling service.
 
-## 6. First engineering milestone
+## 6. Progress
 
-Before implementing the call transport, import and review the existing source in this repository. Then build the cloud service as a separate package and connect it to the existing Gemini Live and desktop-agent interfaces without breaking the current local dashboard.
+### Completed: cloud service and PWA foundation
+
+- Added an isolated `cloud_service` FastAPI package.
+- Added `GET /health` for hosting-platform health checks.
+- Added `GET /api/status` to report cloud, voice-provider configuration, and desktop-agent status without returning secrets.
+- Added a responsive JARVIS mobile web interface.
+- Added a PWA manifest and a minimal offline app-shell service worker.
+- Added a Dockerfile and isolated cloud-service requirements.
+- Added a safe environment template and Git ignore rules for credentials and runtime artifacts.
+
+This is a scaffold only. It does not yet authenticate users, start Gemini Live sessions, stream browser audio, or connect a desktop agent. The call button intentionally remains disabled until those pieces are implemented.
+
+### First engineering milestone still in progress
+
+Import and review the existing desktop assistant source in this repository, preserving its original attribution and license. Then implement account authentication and the server-side Gemini Live session lifecycle. Only after those are working should browser audio transport be enabled.
+
+The cloud service is separate from the desktop dashboard so the local assistant can continue to run independently.
