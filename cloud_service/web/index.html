@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="JARVIS personal AI communication interface">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/static/app.css">
+  <title>J.A.R.V.I.S.</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">J</div>
+      <div>
+        <p class="eyebrow">PERSONAL AI SYSTEM</p>
+        <h1>J.A.R.V.I.S.</h1>
+      </div>
+      <span class="status" id="service-status"><i></i> CONNECTING</span>
+    </header>
+
+    <section class="core" aria-labelledby="welcome-title">
+      <div class="orb-wrap" aria-hidden="true">
+        <div class="orb"><div class="orb-core"></div></div>
+      </div>
+      <p class="eyebrow">SECURE COMMUNICATION CHANNEL</p>
+      <h2 id="welcome-title">At your service.</h2>
+      <p class="subtitle" id="description">Your JARVIS cloud interface is online.</p>
+      <button class="call-button" id="call-button" type="button" disabled>
+        <span class="call-icon" aria-hidden="true">◉</span>
+        <span id="call-label">VOICE NOT CONFIGURED</span>
+      </button>
+      <p class="hint" id="voice-status" role="status">Voice calling will be enabled after secure account authentication and Gemini Live integration.</p>
+    </section>
+
+    <section class="system-panel" aria-label="System status">
+      <div class="panel-heading"><span>SYSTEM STATUS</span><span class="live-dot"></span></div>
+      <div class="metric"><span>Cloud service</span><strong id="cloud-value">Checking</strong></div>
+      <div class="metric"><span>Voice engine</span><strong id="voice-value">Checking</strong></div>
+      <div class="metric"><span>Desktop agent</span><strong id="desktop-value">Not connected</strong></div>
+    </section>
+    <footer>JARVIS CLOUD <span>•</span> DEVELOPMENT BUILD 0.1.0</footer>
+  </main>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
